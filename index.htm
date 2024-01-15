@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice css</title>
+    <style>
+        body {
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Inter', sans-serif;
+            color: #000000;
+            
+        }
+        .container {
+            margin-top: 100px;
+            background-color: #adf6f1;
+            width: 340px;
+            height: 382px;
+        }
+        .navbar {
+            font-family: 'Inter-Bold', sans-serif;
+            text-align: right;
+            font-weight: 700;
+            margin-top: 13px;
+            padding-right: 20px;
+            font-size: 14px;
+        }
+        .content {
+            font-family: 'Inter-Regular', sans-serif;
+            font-weight: 400;
+            font-size: 14px;
+            text-align: left;
+            margin-left: 16px;
+            margin-right: 20px;
+            margin-top: 11px;
+        }
+        .card {
+            display: none;
+            
+        }
+        a{
+            cursor: pointer;
+        }
+        .card.show {
+            display: block;
+            margin-top: 6px;
+            width: 120px;
+            height: 107px;
+            background-color: white;
+            position: absolute;
+            margin-left: 200px;
+            border-radius: 10%;
+        }
+        .menu {
+            display: flex;
+            flex-direction: column;
+            padding: 12px 10px;
+            gap: 8px;
+        }
+        .learn {
+            text-align: left;
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .line {
+            border-style: solid;
+            border-color: #000000;
+            border-width: 1px 0 0 0;
+            width: 100px;
+            height: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <a onclick="toggleMenu()">Explore more</a>
+        </div>
+        <div class="card">
+            <div class="menu">
+                <a class="learn">Learn CSS</a>
+                <div class="line"></div>
+                <a class="learn">Learn CSS</a>
+                <div class="line"></div>
+                <a class="learn">Learn CSS</a>
+            </div>
+        </div>
+        <div class="content">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Purus semper eget duis at tellus at urna condimentum. Dictum at tempor commodo ullamcorper a. Imperdiet proin fermentum leo vel orci. Dui faucibus in ornare quam viverra. Tristique risus nec feugiat in fermentum posuere urna nec tincidunt. Vestibulum sed arcu non odio euismod lacinia. Interdum consectetur libero id faucibus. Nulla pharetra diam sit amet. Egestas maecenas pharetra convallis posuere morbi leo urna molestie. Consectetur adipiscing elit duis tristique sollicitudin nibh sit. Turpis massa tincidunt dui ut. Nulla at volutpat diam ut venenatis tellus in metus. Nibh mauris cursus mattis molestie a iaculis at.
+        </div>
+    </div>    
+</body>
+<script>
+    function toggleMenu(){
+        var menu = document.querySelector ('.card');
+        menu.classList.toggle ('show')
+        var navbar = document.querySelector('.navbar');
+        navbar.style.color = menu.classList.contains('show') ? '#1e1ad3' : '#000000';
+    }
+</script>
+</html>
